@@ -402,7 +402,7 @@ function buildS3(){
 
 // CLOUD
 async function sendCloud(){
-  if(SCRIPT_URL.includes('PEGA_TU_URL')){toast('⚙️ Configura SCRIPT_URL en el código','err');return;}
+  if(SCRIPT_URL.includes('https://script.google.com/macros/s/AKfycby5_r2iDBEPZdhUpM98ErNP61DDPfFHBEwbQXUHvo8n8HH_T--vWGL92YclBYoHj7Rk/exec')){toast('⚙️ Configura SCRIPT_URL en el código','err');return;}
   const fv=document.getElementById('fch').value;
   const payload={seccion:sel,fecha:fv,docente:DOCENTE,
     registros:DB[sel].map((n,i)=>({num:i+1,nombre:n,estado:att[n]||'P'}))};
