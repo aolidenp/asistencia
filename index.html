@@ -1,38 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Asistencia · Ángel Omar</title>
+<title>Asistencia · Plan Lector · Ángel Omar</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
   --bg:#060d1f;
   --c1:#4ade80;--c2:#60a5fa;--c3:#f472b6;--c4:#fb923c;
-  --absent:#f87171;--late:#fbbf24;--just:#60a5fa;
-  --glass:rgba(255,255,255,0.06);--glass2:rgba(255,255,255,0.03);
-  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);
-  --w1:rgba(255,255,255,0.92);--w2:rgba(255,255,255,0.5);
-  --w3:rgba(255,255,255,0.25);--w4:rgba(255,255,255,0.12);
+  --glass:rgba(255,255,255,0.06);--glass2:rgba(255,255,255,0.03);--glass3:rgba(255,255,255,0.09);
+  --border:rgba(255,255,255,0.10);--border2:rgba(255,255,255,0.06);--border3:rgba(255,255,255,0.15);
+  --w1:rgba(255,255,255,0.92);--w2:rgba(255,255,255,0.5);--w3:rgba(255,255,255,0.25);
   --r:18px;--r2:13px;--r3:9px;
 }
 html{font-size:16px;-webkit-text-size-adjust:100%}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--w1);min-height:100dvh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .scene{position:fixed;inset:0;z-index:0;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 65% -5%,#0e2a6e 0%,transparent 55%),radial-gradient(ellipse 60% 50% at -5% 85%,#0a1f55 0%,transparent 50%),#060d1f}
 .blob{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
-.b1{width:480px;height:480px;background:rgba(26,79,214,.3);top:-140px;right:-100px;animation:fl 14s ease-in-out infinite alternate}
-.b2{width:350px;height:350px;background:rgba(14,165,233,.22);bottom:-70px;left:-70px;animation:fl 18s ease-in-out infinite alternate-reverse}
-.b3{width:180px;height:180px;background:rgba(139,92,246,.18);top:42%;right:3%;animation:fl 10s ease-in-out infinite alternate}
-@keyframes fl{0%{transform:translate(0,0) scale(1)}100%{transform:translate(22px,32px) scale(1.09)}}
-.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.016) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.016) 1px,transparent 1px);background-size:44px 44px}
+.b1{width:500px;height:500px;background:rgba(26,79,214,.28);top:-150px;right:-120px;animation:fl 14s ease-in-out infinite alternate}
+.b2{width:380px;height:380px;background:rgba(14,165,233,.2);bottom:-80px;left:-80px;animation:fl 18s ease-in-out infinite alternate-reverse}
+.b3{width:200px;height:200px;background:rgba(139,92,246,.16);top:40%;right:2%;animation:fl 10s ease-in-out infinite alternate}
+@keyframes fl{0%{transform:translate(0,0) scale(1)}100%{transform:translate(24px,36px) scale(1.1)}}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.014) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.014) 1px,transparent 1px);background-size:44px 44px}
 #root{position:relative;z-index:1;max-width:480px;margin:0 auto;min-height:100dvh;display:flex;flex-direction:column}
 
 /* TOPBAR */
 .topbar{padding:14px 16px 0;position:sticky;top:0;z-index:50}
-.tbi{background:rgba(6,13,31,.8);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid var(--border);border-radius:var(--r);padding:11px 15px;display:flex;align-items:center;gap:11px;box-shadow:0 4px 32px rgba(0,0,0,.25)}
-.tb-logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#1a4fd6,#0ea5e9);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.tbi{background:rgba(6,13,31,.85);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid var(--border);border-radius:var(--r);padding:11px 15px;display:flex;align-items:center;gap:11px;box-shadow:0 4px 32px rgba(0,0,0,.3)}
+.tb-logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#1a4fd6,#0ea5e9);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
 .tb-txt{flex:1;min-width:0}
 .tb-name{font-size:13px;font-weight:700;line-height:1.1}
 .tb-sub{font-size:9px;color:var(--w3);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-top:1px}
@@ -40,62 +37,72 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--w1);min-h
 .cl-t{font-family:'DM Mono',monospace;font-size:17px;font-weight:500;letter-spacing:-.02em;line-height:1}
 .cl-d{font-size:9px;color:var(--w3);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-top:2px}
 
-main{flex:1;padding:12px 16px 110px}
+main{flex:1;padding:12px 16px 120px}
 
 /* PROGRESS */
 .ptrack{height:2px;background:rgba(255,255,255,.05);border-radius:2px;margin-bottom:14px;overflow:hidden}
 .pfill{height:100%;background:linear-gradient(90deg,#1a4fd6,#4ade80);border-radius:2px;transition:width .45s cubic-bezier(.32,.72,0,1)}
 
 /* SCREENS */
-.screen{display:none;animation:su .28s cubic-bezier(.32,.72,0,1)}
+.screen{display:none;animation:su .3s cubic-bezier(.32,.72,0,1)}
 .screen.active{display:block}
-@keyframes su{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes su{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 
 /* CARD */
 .card{background:var(--glass);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:10px;position:relative;overflow:hidden}
 .card::before{content:'';position:absolute;top:0;left:14px;right:14px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent)}
-.clabel{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--w3);margin-bottom:11px}
+.clabel{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--w3);margin-bottom:11px;display:flex;align-items:center;gap:6px}
 
 /* YEAR SECTION */
-.yblock{margin-bottom:14px}
+.yblock{margin-bottom:13px}
 .yblock:last-child{margin-bottom:0}
 .ytag{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--w3);margin-bottom:7px}
 .ydot{width:5px;height:5px;border-radius:50%}
 .sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
 .schip{padding:11px 4px;background:var(--glass2);border:1px solid var(--border2);border-radius:var(--r3);color:var(--w2);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-align:center;transition:all .18s;letter-spacing:.03em}
-.schip:active{transform:scale(.9)}
-.schip.sel{border-color:transparent;color:#060d1f;font-weight:800;box-shadow:0 3px 12px rgba(0,0,0,.35)}
+.schip:active{transform:scale(.88)}
+.schip.sel{border-color:transparent;color:#060d1f;font-weight:800;box-shadow:0 3px 14px rgba(0,0,0,.4)}
 .schip[data-y="1"].sel{background:#4ade80}
 .schip[data-y="2"].sel{background:#60a5fa}
 .schip[data-y="3"].sel{background:#f472b6}
 .schip[data-y="4"].sel{background:#fb923c}
 
-/* DATE */
-.datefield{display:flex;align-items:center;gap:10px;padding:11px 13px;background:var(--glass2);border:1px solid var(--border2);border-radius:var(--r2)}
-.datefield label{font-size:10px;font-weight:700;color:var(--w3);white-space:nowrap;letter-spacing:.08em;text-transform:uppercase}
-input[type="date"]{flex:1;background:transparent;border:none;color:var(--w1);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;outline:none;color-scheme:dark;min-width:0}
+/* INPUTS */
+.inputrow{display:flex;align-items:center;gap:10px;padding:11px 13px;background:var(--glass2);border:1px solid var(--border2);border-radius:var(--r2)}
+.inputrow label{font-size:10px;font-weight:700;color:var(--w3);white-space:nowrap;letter-spacing:.08em;text-transform:uppercase}
+input[type="date"],input[type="text"]{flex:1;background:transparent;border:none;color:var(--w1);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;outline:none;color-scheme:dark;min-width:0}
+input[type="text"]::placeholder{color:var(--w3)}
+input[type="text"]:focus{color:var(--w1)}
 
 /* BUTTONS */
 .btnp{width:100%;padding:15px;border:none;border-radius:var(--r2);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .18s;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;gap:8px}
 .btnp:active{transform:scale(.97)}
-.btnp:disabled{opacity:.28;cursor:not-allowed;transform:none}
+.btnp:disabled{opacity:.25;cursor:not-allowed;transform:none}
 .btnp.green{background:linear-gradient(135deg,#16a34a,#4ade80);color:#052e16;box-shadow:0 4px 20px rgba(74,222,128,.25)}
-.btnp.blue{background:linear-gradient(135deg,#1d4ed8,#60a5fa);color:#fff;box-shadow:0 4px 20px rgba(96,165,250,.2)}
-.btnp.ghost{background:rgba(255,255,255,.08);border:1px solid var(--border);color:var(--w1)}
+.btnp.blue{background:linear-gradient(135deg,#1d4ed8,#60a5fa);color:#fff;box-shadow:0 4px 20px rgba(96,165,250,.22)}
+.btnp.pink{background:linear-gradient(135deg,#9d174d,#f472b6);color:#fff;box-shadow:0 4px 20px rgba(244,114,182,.22)}
+.btnp.ghost{background:rgba(255,255,255,.07);border:1px solid var(--border);color:var(--w1)}
+.btnp.danger{background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.25);color:#f87171}
 .btnback{display:inline-flex;align-items:center;gap:5px;background:none;border:none;color:var(--w3);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;cursor:pointer;padding:0;margin-bottom:13px;transition:color .15s;letter-spacing:.03em}
 .btnback svg{width:13px;height:13px}
+.btn-sm{padding:7px 13px;font-size:12px;border-radius:8px;border:none;font-family:'DM Sans',sans-serif;font-weight:700;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:5px}
+.btn-sm:active{transform:scale(.92)}
+.btn-sm.green{background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.3);color:#4ade80}
+.btn-sm.red{background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.25);color:#f87171}
 
 /* S2 HEADER */
 .shead{display:flex;align-items:center;gap:13px;margin-bottom:13px;padding:14px;background:var(--glass);border:1px solid var(--border);border-radius:var(--r)}
-.sbadge{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:#060d1f;flex-shrink:0}
+.sbadge{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#060d1f;flex-shrink:0}
 .shinfo .shn{font-size:17px;font-weight:800;line-height:1.1}
 .shinfo .shm{font-size:11px;color:var(--w3);margin-top:3px}
-.shinfo .shd{font-size:11px;color:var(--w2);margin-top:2px;font-weight:500}
+.shinfo .shd{font-size:11px;color:var(--w2);margin-top:2px;font-weight:600}
 
 /* COUNTERS */
 .ctrs{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-bottom:12px}
-.ctr{padding:9px 5px;background:var(--glass2);border:1px solid var(--border2);border-radius:var(--r2);text-align:center}
-.cv{font-size:21px;font-weight:800;line-height:1;font-family:'DM Mono',monospace}
+.ctr{padding:9px 5px;background:var(--glass2);border:1px solid var(--border2);border-radius:var(--r2);text-align:center;transition:all .2s}
+.ctr.pulse{animation:pulse .35s ease}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+.cv{font-size:22px;font-weight:800;line-height:1;font-family:'DM Mono',monospace}
 .cl{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--w3);margin-top:3px}
 
 /* LEGEND */
@@ -106,26 +113,37 @@ input[type="date"]{flex:1;background:transparent;border:none;color:var(--w1);fon
 /* BULK */
 .bulkrow{display:flex;gap:5px;margin-bottom:11px}
 .bulkbtn{flex:1;padding:9px 5px;background:var(--glass2);border:1px solid var(--border2);border-radius:var(--r3);color:var(--w2);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;cursor:pointer;text-align:center;transition:all .14s;letter-spacing:.03em}
-.bulkbtn:active{transform:scale(.95)}
+.bulkbtn:active{transform:scale(.93)}
 
 /* STUDENT ROW */
-.stulist{display:flex;flex-direction:column;gap:6px}
-.srow{display:flex;align-items:center;gap:9px;padding:10px 12px;background:var(--glass2);border:1px solid var(--border2);border-radius:var(--r2);transition:all .16s}
+.stulist{display:flex;flex-direction:column;gap:5px}
+.srow{display:flex;align-items:center;gap:9px;padding:9px 12px;background:var(--glass2);border:1px solid var(--border2);border-radius:var(--r2);transition:all .16s;position:relative}
 .srow.sP{background:var(--glass2);border-color:var(--border2)}
 .srow.sFI{background:rgba(248,113,113,.07);border-color:rgba(248,113,113,.2)}
 .srow.sT{background:rgba(251,191,36,.06);border-color:rgba(251,191,36,.18)}
 .srow.sFJ{background:rgba(96,165,250,.06);border-color:rgba(96,165,250,.18)}
+.srow.new-student{border-color:rgba(244,114,182,.35);background:rgba(244,114,182,.05)}
+.snew-badge{font-size:7px;font-weight:800;letter-spacing:.08em;background:rgba(244,114,182,.2);border:1px solid rgba(244,114,182,.4);color:#f472b6;padding:2px 5px;border-radius:4px;text-transform:uppercase;flex-shrink:0}
 .snum{font-size:9px;font-weight:600;color:var(--w3);width:18px;flex-shrink:0;text-align:right;font-family:'DM Mono',monospace}
 .sname{flex:1;font-size:13px;font-weight:500;color:var(--w1);line-height:1.25;min-width:0}
 
 /* STATUS PILLS */
 .spills{display:flex;gap:3px;flex-shrink:0}
 .sp{width:34px;height:30px;border-radius:7px;border:1.5px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:var(--w3);font-size:10px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .14s;font-family:'DM Mono',monospace}
-.sp:active{transform:scale(.85)}
-.sp.onP{background:rgba(74,222,128,.14);border-color:#4ade80;color:#4ade80;box-shadow:0 0 0 2px rgba(74,222,128,.13)}
-.sp.onFI{background:rgba(248,113,113,.14);border-color:#f87171;color:#f87171;box-shadow:0 0 0 2px rgba(248,113,113,.13)}
-.sp.onT{background:rgba(251,191,36,.14);border-color:#fbbf24;color:#fbbf24;box-shadow:0 0 0 2px rgba(251,191,36,.13)}
-.sp.onFJ{background:rgba(96,165,250,.14);border-color:#60a5fa;color:#60a5fa;box-shadow:0 0 0 2px rgba(96,165,250,.13)}
+.sp:active{transform:scale(.82)}
+.sp.onP{background:rgba(74,222,128,.14);border-color:#4ade80;color:#4ade80;box-shadow:0 0 0 2px rgba(74,222,128,.12)}
+.sp.onFI{background:rgba(248,113,113,.14);border-color:#f87171;color:#f87171;box-shadow:0 0 0 2px rgba(248,113,113,.12)}
+.sp.onT{background:rgba(251,191,36,.14);border-color:#fbbf24;color:#fbbf24;box-shadow:0 0 0 2px rgba(251,191,36,.12)}
+.sp.onFJ{background:rgba(96,165,250,.14);border-color:#60a5fa;color:#60a5fa;box-shadow:0 0 0 2px rgba(96,165,250,.12)}
+
+/* ADD STUDENT PANEL */
+.add-panel{background:rgba(244,114,182,.06);border:1px solid rgba(244,114,182,.2);border-radius:var(--r2);padding:13px;margin-bottom:11px}
+.add-panel .clabel{color:rgba(244,114,182,.7);margin-bottom:10px}
+.add-input{display:flex;gap:8px;align-items:center}
+.add-input input{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:9px 12px;color:var(--w1);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;outline:none}
+.add-input input:focus{border-color:rgba(244,114,182,.4);background:rgba(244,114,182,.05)}
+.add-input input::placeholder{color:var(--w3)}
+.add-hint{font-size:10px;color:var(--w3);margin-top:7px;line-height:1.5}
 
 /* CONFIRM */
 .cfi{display:flex;align-items:center;gap:10px;padding:11px 13px;border-radius:var(--r2);margin-bottom:6px;border:1px solid transparent}
@@ -138,37 +156,45 @@ input[type="date"]{flex:1;background:transparent;border:none;color:var(--w1);fon
 .cfnames{font-size:10px;color:var(--w3);margin-top:1px;line-height:1.4}
 .cfcnt{font-size:22px;font-weight:800;font-family:'DM Mono',monospace;margin-left:auto;flex-shrink:0}
 
+/* INFO BOX */
+.infobox{padding:10px 13px;border-radius:var(--r3);font-size:11px;color:var(--w2);line-height:1.6;margin-bottom:10px}
+.infobox.blue{background:rgba(96,165,250,.07);border:1px solid rgba(96,165,250,.15)}
+.infobox.green{background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.15)}
+.infobox.pink{background:rgba(244,114,182,.07);border:1px solid rgba(244,114,182,.15)}
+
 /* ACTION ROW */
 .arow{display:flex;gap:8px;margin-top:12px}
 .arow .btnp{flex:1}
 
 /* SUCCESS */
 .swrap{text-align:center;padding:28px 16px}
-.sico{font-size:54px;margin-bottom:12px;display:block;animation:pop .5s cubic-bezier(.34,1.56,.64,1)}
+.sico{font-size:56px;margin-bottom:14px;display:block;animation:pop .55s cubic-bezier(.34,1.56,.64,1)}
 @keyframes pop{0%{transform:scale(0)}100%{transform:scale(1)}}
-.stitle{font-size:26px;font-weight:800;color:var(--c1);margin-bottom:5px}
-.ssub{font-size:13px;color:var(--w3);line-height:1.7;margin-bottom:20px}
+.stitle{font-size:26px;font-weight:800;color:var(--c1);margin-bottom:6px}
+.ssub{font-size:13px;color:var(--w3);line-height:1.75;margin-bottom:20px}
 .sstats{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-bottom:20px}
-.ssi{padding:11px;background:var(--glass2);border:1px solid var(--border2);border-radius:var(--r2);text-align:center}
-.ssv{font-size:23px;font-weight:800;font-family:'DM Mono',monospace}
+.ssi{padding:12px;background:var(--glass2);border:1px solid var(--border2);border-radius:var(--r2);text-align:center}
+.ssv{font-size:24px;font-weight:800;font-family:'DM Mono',monospace}
 .ssl{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--w3);margin-top:2px}
+.ssheet-info{display:flex;align-items:center;gap:8px;padding:10px 13px;background:rgba(74,222,128,.07);border:1px solid rgba(74,222,128,.18);border-radius:var(--r3);margin-bottom:12px;font-size:11px;color:#4ade80;font-weight:600}
 
 /* FAB */
-.fab{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;padding:10px 16px 24px;background:linear-gradient(to top,rgba(6,13,31,1) 65%,transparent);z-index:40;pointer-events:none}
-.fab .btnp{pointer-events:all;box-shadow:0 8px 32px rgba(0,0,0,.5)}
+.fab{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;padding:10px 16px 26px;background:linear-gradient(to top,rgba(6,13,31,1) 60%,transparent);z-index:40;pointer-events:none}
+.fab .btnp{pointer-events:all;box-shadow:0 8px 36px rgba(0,0,0,.5)}
 
 /* OVERLAY */
-.ovl{position:fixed;inset:0;z-index:200;background:rgba(3,7,18,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:none;align-items:center;justify-content:center;flex-direction:column;gap:18px}
+.ovl{position:fixed;inset:0;z-index:200;background:rgba(3,7,18,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);display:none;align-items:center;justify-content:center;flex-direction:column;gap:16px}
 .ovl.on{display:flex}
-.spin{width:42px;height:42px;border:3px solid rgba(255,255,255,.1);border-top-color:var(--c1);border-radius:50%;animation:sp .7s linear infinite}
+.spin{width:44px;height:44px;border:3px solid rgba(255,255,255,.1);border-top-color:var(--c1);border-radius:50%;animation:sp .7s linear infinite}
 @keyframes sp{to{transform:rotate(360deg)}}
-.ovlmsg{font-size:13px;font-weight:600;color:var(--w2)}
+.ovlmsg{font-size:13px;font-weight:600;color:var(--w2);text-align:center;line-height:1.6;max-width:240px}
 
 /* TOAST */
-.toast{position:fixed;bottom:110px;left:50%;transform:translateX(-50%) translateY(10px);background:rgba(255,255,255,.1);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.16);color:var(--w1);padding:10px 20px;border-radius:100px;font-size:13px;font-weight:600;opacity:0;transition:all .22s;z-index:300;pointer-events:none;white-space:nowrap}
+.toast{position:fixed;bottom:118px;left:50%;transform:translateX(-50%) translateY(10px);background:rgba(255,255,255,.1);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.16);color:var(--w1);padding:10px 20px;border-radius:100px;font-size:13px;font-weight:600;opacity:0;transition:all .22s;z-index:300;pointer-events:none;white-space:nowrap}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 .toast.ok{border-color:rgba(74,222,128,.4);background:rgba(74,222,128,.12);color:#4ade80}
 .toast.err{border-color:rgba(248,113,113,.4);background:rgba(248,113,113,.12);color:#f87171}
+.toast.info{border-color:rgba(96,165,250,.4);background:rgba(96,165,250,.12);color:#60a5fa}
 </style>
 </head>
 <body>
@@ -177,10 +203,10 @@ input[type="date"]{flex:1;background:transparent;border:none;color:var(--w1);fon
 <div id="root">
   <div class="topbar">
     <div class="tbi">
-      <div class="tb-logo">📋</div>
+      <div class="tb-logo">📚</div>
       <div class="tb-txt">
         <div class="tb-name">Ángel Omar Oliden Pacherrez</div>
-        <div class="tb-sub">UCV College · PLAN LECTOR 2026</div>
+        <div class="tb-sub">UCV College · Plan Lector 2026</div>
       </div>
       <div class="tb-clock">
         <div class="cl-t" id="clk">--:--</div>
@@ -192,30 +218,33 @@ input[type="date"]{flex:1;background:transparent;border:none;color:var(--w1);fon
   <main>
     <div class="ptrack"><div class="pfill" id="pf" style="width:25%"></div></div>
 
-    <!-- S1: SECCIÓN + FECHA -->
+    <!-- ══ S1: SECCIÓN + FECHA ══ -->
     <div class="screen active" id="s1">
       <div class="card">
-        <div class="clabel">Selecciona la sección</div>
+        <div class="clabel">📋 Selecciona la sección</div>
         <div class="yblock"><div class="ytag"><div class="ydot" style="background:#4ade80"></div>Primer año</div><div class="sgrid" id="g1"></div></div>
         <div class="yblock"><div class="ytag"><div class="ydot" style="background:#60a5fa"></div>Segundo año</div><div class="sgrid" id="g2"></div></div>
         <div class="yblock"><div class="ytag"><div class="ydot" style="background:#f472b6"></div>Tercer año</div><div class="sgrid" id="g3"></div></div>
         <div class="yblock"><div class="ytag"><div class="ydot" style="background:#fb923c"></div>Cuarto año</div><div class="sgrid" id="g4"></div></div>
       </div>
       <div class="card">
-        <div class="clabel">Fecha de la sesión</div>
-        <div class="datefield"><label>📅</label><input type="date" id="fch"></div>
+        <div class="clabel">📅 Fecha de la sesión</div>
+        <div class="inputrow"><label>Fecha</label><input type="date" id="fch"></div>
+      </div>
+      <div class="infobox blue">
+        📊 Cada sesión se guardará en una <strong>hoja separada por fecha</strong> en Google Sheets, con todos los datos de la clase organizados.
       </div>
     </div>
 
-    <!-- S2: PASAR LISTA -->
+    <!-- ══ S2: PASAR LISTA ══ -->
     <div class="screen" id="s2">
       <button class="btnback" onclick="go(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>Cambiar sección</button>
       <div class="shead" id="sh"></div>
       <div class="ctrs">
-        <div class="ctr"><div class="cv" id="cP" style="color:#4ade80">0</div><div class="cl">Presentes</div></div>
-        <div class="ctr"><div class="cv" id="cFI" style="color:#f87171">0</div><div class="cl">Faltas</div></div>
-        <div class="ctr"><div class="cv" id="cT" style="color:#fbbf24">0</div><div class="cl">Tardanzas</div></div>
-        <div class="ctr"><div class="cv" id="cFJ" style="color:#60a5fa">0</div><div class="cl">Justif.</div></div>
+        <div class="ctr" id="ctrP"><div class="cv" id="cP" style="color:#4ade80">0</div><div class="cl">Presentes</div></div>
+        <div class="ctr" id="ctrFI"><div class="cv" id="cFI" style="color:#f87171">0</div><div class="cl">Faltas</div></div>
+        <div class="ctr" id="ctrT"><div class="cv" id="cT" style="color:#fbbf24">0</div><div class="cl">Tardanzas</div></div>
+        <div class="ctr" id="ctrFJ"><div class="cv" id="cFJ" style="color:#60a5fa">0</div><div class="cl">Justif.</div></div>
       </div>
       <div class="legend">
         <div class="li"><div class="ld" style="background:#4ade80"></div>P · Presente</div>
@@ -227,182 +256,303 @@ input[type="date"]{flex:1;background:transparent;border:none;color:var(--w1);fon
         <button class="bulkbtn" onclick="markAll('P')">✓ Todos presentes</button>
         <button class="bulkbtn" onclick="markAll('FI')">✗ Todos ausentes</button>
       </div>
+
+      <!-- Panel agregar alumno -->
+      <div class="add-panel">
+        <div class="clabel">✨ Agregar nuevo alumno</div>
+        <div class="add-input">
+          <input type="text" id="newName" placeholder="Apellidos y Nombres completos" autocomplete="off">
+          <button class="btn-sm green" onclick="addStudent()">+ Agregar</button>
+        </div>
+        <div class="add-hint">⚡ El alumno se agrega a esta sesión y se <strong>guarda permanentemente</strong> en el registro de la sección.</div>
+      </div>
+
       <div class="stulist" id="sl"></div>
-      <div style="height:76px"></div>
+      <div style="height:80px"></div>
     </div>
 
-    <!-- S3: CONFIRMAR -->
+    <!-- ══ S3: CONFIRMAR ══ -->
     <div class="screen" id="s3">
       <button class="btnback" onclick="go(2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>Editar lista</button>
       <div class="card" id="cfh"></div>
-      <div class="card"><div class="clabel">Resumen de la sesión</div><div id="cfl"></div></div>
+      <div class="infobox green" id="sheet-preview"></div>
+      <div class="card"><div class="clabel">📊 Resumen de la sesión</div><div id="cfl"></div></div>
+      <div id="new-students-confirm"></div>
       <div class="arow">
-        <button class="btnp ghost" onclick="dlExcel()" style="flex:.85">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Descargar CSV
+        <button class="btnp ghost" onclick="dlCSV()" style="flex:.8">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          CSV
         </button>
         <button class="btnp green" onclick="sendCloud()">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>
-          Subir a la nube
+          Subir a Sheets
         </button>
       </div>
       <div style="height:16px"></div>
     </div>
 
-    <!-- S4: ÉXITO -->
+    <!-- ══ S4: ÉXITO ══ -->
     <div class="screen" id="s4">
       <div class="card swrap">
         <span class="sico">✅</span>
-        <div class="stitle">¡Asistencia enviada!</div>
+        <div class="stitle">¡Registrado!</div>
         <div class="ssub" id="ssub"></div>
+        <div class="ssheet-info" id="sheet-ok">📄 Hoja creada en Google Sheets</div>
         <div class="sstats" id="sst"></div>
-        <button class="btnp ghost" onclick="reset()">Registrar otra sección</button>
+        <div id="new-stu-ok"></div>
+        <button class="btnp ghost" onclick="reset()" style="margin-top:4px">Registrar otra sección</button>
       </div>
     </div>
   </main>
 </div>
 
-<!-- FAB -->
 <div class="fab" id="fab">
   <button class="btnp green" id="fabn" onclick="fabAct()" disabled>Continuar →</button>
 </div>
 
-<div class="ovl" id="ovl"><div class="spin"></div><div class="ovlmsg" id="ovlm">Enviando…</div></div>
+<div class="ovl" id="ovl">
+  <div class="spin"></div>
+  <div class="ovlmsg" id="ovlm">Enviando a Google Sheets…</div>
+</div>
 <div class="toast" id="tst"></div>
 
 <script>
 // ══════════════════════════════════════════════════
-// ✅ URL DE GOOGLE APPS SCRIPT (CORREGIDA)
+// ✅ URL DE GOOGLE APPS SCRIPT
 // ══════════════════════════════════════════════════
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby5_r2iDBEPZdhUpM98ErNP61DDPfFHBEwbQXUHvo8n8HH_T--vWGL92YclBYoHj7Rk/exec';
 
-// DATOS DE ESTUDIANTES
-const DB={"1A":["Acuña Orozco Maria Alejandra","Chinga Mauricio Lindsay Alanna","Cruz Infante Massimo Mateo","Damian Llauce Yoselin Yamile","García Martínez Gaella Victoria","Guerrero Gonzalez Romy Arianna","More Seminario Dayron Smith","Paico Manrique Daniel Isaias","Panta Yamo Thiago Salvador","Rivera Salvador Mia Alitza Dae","Rodriguez Carrasco Thiago Matias","Seminario Núñez María Valentina","Talledo Pampas Santiago Rolando Franco"],"1B":["Barrientos Chafloque Luciana Valentina","Bayona Artaza Luana Milagros","Celí Ramírez María Guadalupe","Chávez Gálvez Eduardo Leonel","Córdova Abad Nider Fran","Delgado Ybáñez Dylan Sebastián","Dioses Salazar Ana Paula","Marchena Rodríguez Yoel Aldhair","Mechan Aguilar Valeria Alessandra","Morán Fiestas Jazmín Alessandra","Rázuri Jara Daylín Guadalupe","Rebolledo Panta Gustavo Andrés","Sullon Saba Iker Joel"],"1C":["Acaro Artaza Manuel Ignacio","Aguirre Yangua Patricia Ximena","Armas Ramos Luhana Anahi","Castillo Arica Camila Rafaella","Domador Bernuy Alma Mercedes","Domínguez Orozco Mia Belén","Huamán Santa Cruz Valery Abigail","La Serna Saravia Tiago Ismael","López Zapata Pool Antonio","Santur Peña Ivanna Alexia","Torres Salazar Joshue Andre","Villanueva de la Cruz Xiomara Antuanet"],"1D":["Agurto Fiestas Stephanie Antonella","Armas Yamunaque Ricardo Isacc","Lachira Sandoval Maleya Micaela","Lazo García Paulo Sebastián","Mejía Santisteban Kendra Naiara","Purizaca Guerrero Will Alexander","Purizaca Merino Fabiana Emperatriz Antonella","Purizaca Torres Daiana Antonella","Ruiz Calle Thiago Guillermo","Tejada Ramírez Mariajosé","Villalta Carhuatocto Dyland Sebastian"],"1E":["Arévalo Vegas Macarena Evangeline","Caballero Gulden Isabella Valeria","Calle Santín Thiago Alessandro","Cuyatti Rojas Thiago Evans","Dávila Alburqueque Mathias Francesco","Diaz Taboada Brithany Alejandra","Jaramillo Pintado Valeria Antonella","More Alvarado Renzo Nicolás","Neyra Huertas Sebastian Abdiel","Peña Villalobos Elena Maria Fabiana","Socola Nizama Nayeli Ayelen","Yactayo Campos Leonardo Geankarlos","Zapata Bustamante Santhiago Mateo"],"1F":["Arica Cornejo Thais Saori","Castillo Giles Sebastián Antonio","Dioses Zapata Ariadna Massiel","Farias Talledo Briella","Herrera Rambla Leyton Sandra Valeria","Jimenez Reyes Eimy Yuleidy","Mogollón Sunción Angelo Manuel","More Purizaca Laleishka Zamantha","Paucar Velasco Mathias Jesaid","Purizaca Oliva Thiago Domingo Alberto","Ticliahuanga Umbo Fernando Jeanpool","Vargas Ojeda Kaory Danae"],"1G":["Aguilar Castillo Thiago Moises","Aguilar Flores Luciana Belén","Arribasplata Bedregal Fátima","Atto Mondragón Yanco Salvador","Barba Goicochea Alexia Valeria","Córdova Córdova Luis Fernando","Delgado Feria José Sebastián","Facundo Mendoza Joaquín Fernando Miguel","Farfán Barranzuela Angélica Lucia","Lizarraga Mauricio Rayzzha Shanellie","Negrini Durand Mía Isanella","Paucar Antón José Miguel","Salazar Barrera Annika Brunella","Valle Abad Brithel Virginia","Vilchez Espinoza Matthew André"],"1H":["Alburqueque Ginocchio Neil Evans","Carmen Juarez Carlos Sebastian","Colonia Vences María Fernanda Guadalupe","Cruzado Chumacero Fabian Alessandro","López Quinde Luis Fernando","Maluquis López Luhana Seleny","Mogollón Ravello Liam Benjamín","Otero Tene Khiara Olenka","Temoche Coello Marcelo Stefano","Velasco Cueva Isabella Victoria","Velasco Neira Valery Noemi"],"2A":["Álamo López Marcos Uriel","Calle Sullón Fabrizio Benjamín","Cordova Carrión Naomy","Farfán Juárez Luhana Fabiana","Garcia Torres Marita Milagros","Gómez Delgado Fernanda Abigail","Gómez Saavedra Luis Mario","Manrique Nima Camila Guadalupe","Pacheco Gonzales Matheo Sebastian","Pastor Rodriguez Giaco Paolo","Ruiz Quispe Luis Fabrizio"],"2B":["Alberca Cedillo Yefferson Jeampier","Calle Seminario Adriano Josué","Echeandía Inga Darlyne Sharik","García Nuñez Ricardo Paolo","Inga Bermeo Anthony Stefano Barek","Mauricio Palacios Isabella","Murguía Fan María José","Poberezhetc Pechon Dajana Nadezda","Revilla Calva Luhana de los Angeles","Sánchez Tejada Jazmín Belén","Talledo Hernández Luis Alejandro"],"2C":["Arroyo García Ángelo Joshua","Caramantin Silva Clit Benjamin","Castillo Reyes Ashely Pierina","Díaz Sánchez Luciana Anthonela","Flores Campoverde Juan Diego","Huamán Eras Santiago Martín","Mechato Lazo Milton Adrián","Paiva Villalobos Yanis Valentina","Panta Gómez Dominik Salvador","Riofrio Medina Izabelle Guadalupe","Tesen Castillo Fernanda Maribel"],"2D":["Ayala Alarcón Angely Lucero","Fiestas Chunga Mia Kaory","Huamán Córdova Feidy Yahaira","Huarcaya Velásquez Bianca Sofia","Jaramillo Espinoza Diego Armando","Lucano Jaramillo Mariajosé Itzayana","Marca Mamani Yampier Anderson","Mego Jiménez Giulia Letizia","Neira Mori Thiago Valentino","Pasapera Jiménez Rafael Aarón","Rivera Mondragón Jerry Jean Paul","Rojas Tirado Mateo Rafael","Torres Ayala Jordy Alexander"],"2E":["Barco Carrión Pedro Luis","Dávila García Mia Valentina","Durand García Ruth Noemi","Encina Hidalgo Victor Manuel Alejandro","Frías Ramírez Anthonella Yaritza","Pazo Querevalú Darlyn Alonso","Quinde Zapata André Antonio","Rodríguez Rocha Renzo Jesús","Villegas Celi Mario Juan","Zegarra Saavedra Josué Nicola"],"2F":["Carrasco Ramírez Rodrigo Neymar","Córdova Yarleque Samir Alejandro","Cruz Yovera Jostin Adrian","Espinoza Arámbulo Ivanna Mercedes","Gavilán Vinces Emanuel Joshua Luis","Gonzales Ramos Yahid Enrique","López Becerra Ximena Belén","More Feria Valeria Sofia","Rosillo Veliz Amel Alexandra Graciel","Vega Rentería Alejandra Sofia","Zapata Rosillo Cesar Enrique"],"2G":["Alvarez Merino Valentino Alessandro","Burgos Diaz Brittany Yazmín","Cardoza Oliva Lucciana Katherine","Casavilca Guevara Frank Edú","Cavero Merino Dominick Danilo","De la Cruz Mena Dylan Jerick","Espinoza Calva Sol Anthonella","Huamán Chanduvi Juvetsy María","Juárez Calle Valeria Fernanda","Peña Torres Yubisay de Jesus","Ruiz Bobbio Mateo Keith","Velásquez Ricalde Cristopher Giuseppi"],"2H":["Arbulú Troncos Santhiago José","Calle Calle Fabiana Saori","Céspedes Alburqueque Joaquin Nicolas","Espinoza Pariaton Zoe Zirel","Litano Sullon Thiago Sebastián","More Silva Thiago Anthony Gepzel","Peña Tejada Rhianna Bianca Lourdes","Rivera Seminario Fabiana Yuset","Rosales Ramos Pia Yuliana Alexandra","Saavedra García Emmanuel Gustavo","Sampertegui Olivos Estefano Leonidas","Sejuro Troncos Marina Alejandra","Villazón Chiroque Thiago Emmanuel"],"3A":["Abad Coronado D Alessandra Anahis","Calderón Benites Shmuel Alejandro","Chuzón Lazo Valerhy Fernanda","Elera Carrillo Mauricio Sebastián","García Alvines Valentina Elizabeth","Malo Mendoza Gonzalo Fabrisio","Mondragón Bautista Valentina Treysi","Núñez Febre Luana Gabriela","Pacheco Gonzales Aaron Yadiel","Requena Silva Ángel Fabrizzio","Rivera Coveñas Leiner Dayiro","Salazar Chávez Santiago Mateo","Sullon Saba Nixie Yarheli","Vargas Correa Aurora Elizet","Villalta Manrique Iker Mateo"],"3B":["Aguilar Revolledo Luhana Domenika","Castillo Simbala Kiara Valentina","Cavero Merino Diego Sebasthian","Diaz Taboada Dayron Fabian","Farfán Orozco Kaleth Yazith","Manayay Castillo Génesis Lucero","Mondragón Barreto Valeria Fabiana","Navarro Agurto Rubén Eliu","Nonajulca Coro Neymar Sebastián","Oquelis Morán Josue Salvador","Romero Montalbán Santiago","Saldivar Sandoval Ayrton David","Wong García Alba Jazmín"],"3C":["Diaz Dominguez Daniel Alexander","Elera Llacsahuache Pedro Daniel","Espinoza Villalta Joaquín Alejandro","Fano More Marienella Abigail","Guerrero Córdova Génesis Camila","López Martínez Fiorella del Rosario","Martínez Tavara Diego Alonso","Navarro Ruiz Smith Joel","Orozco Chero Jeicob Benjmín","Ruiz Calle Kiara Elizabel","Silva Moscol Lucero","Toledo Espinoza Derek Eduardo","Vargas Picoy Dulce Daniela","Vásquez Otero Daniel Alejandro"],"3D":["Alemán Abad Cristhian Xavier","Álvarez Ocampo Dylan Nadir","Bayona Prado Juan David","Chiroque Silupu Briana Mirella","Garabito Godos Hatsumi Kiyari","Guerrero Salas Alessandro Joel","Medina Valle Camila Luana","Moscol Calle Thiago Gael","Nuñez Rivera Gerard Augusto","Ruiz Sandoval Mateo Nicolás","Seminario Gutiérrez Nuria Jimena","Suárez Atarama Juan Matías","Torres Calle Flavia Anthonela","Vértiz Salazar Louisiana Valeria"],"3E":["Bran Ventura Nuriel Augusto","Estela Rodriguez Luis Fernando","Inga Chinga Milagritos Maricielo","Mondragón Luna Aidan Jeffrey","Peña Ancajima Jeison Ezair","Purizaca Rodriguez Jhomayra Anyela Kaory","Sosa Serrano Rafaella Tahis","Tocto Ruiz Camila Michelle","Torres Salazar Jadiel Ricardo","Vilchez Arévalo Eleo Leonardo"],"3F":["Amaya Cespedes Mathias","Ancajima Silupú Denzel Aarón","Atto Mondragón Kahory","Córdova Abad Luciana Ximena","Coro García Jean Franco","Ferro Rodriguez Joaquin Leandro","Herrera Alzamora Breitner Louis","Herrera Tizón Yunior Yair","Mendoza Vilela Luana Yamilet","Peña Olivera Bianca Belén","Seminario Regalado Camila Elizabeth","Ulloa Herrera Gabriel Jair","Vilela Zapata Franco Andre"],"3G":["Ayme Pineda Luciana Mariel","Corilla Diaz Fernando Miguel","Francia Gil Fabrizio Alexander","Mogollón Berrú Jackson Uriel","Nunura Pazo Danner Paul","Ontaneda Jimenez Karen Dayana","Peña Villalobos Fabian Alexander","Quilcate Girón Amira De Los Cielos","Ruiz Zapata Victor Eduardo","Sanchéz Olaya Mathias Eduardo","Serrano Escobar Sharon Gelarin","Tesen Niño Mariana Abigail"],"4A":["Arroyo Larrea Joaquín Sebastian","Azabache Maza Fabrizzio Mizael","Bruno Martinez Salomón Henry","Calderón Benites Luana Michaelly","Carhuapoma Negrini Danilo Esteban","Castro Lamadrid Santiago del Piero","Espinoza Chulle Rubby Rossmina","Eyzaguirre Callirgos Luana Nicoll","Garcia Zapata Blanca Kasumi","Gutierrez Rojas José David","Holguín Córdova Fernanda Sofia","Huertas Jiménez Rodrigo Alejandro","Lopez Feria Mya Antonella","Martínez Cahuaza Selheny Sayuri","Merino Ramírez Gemma Yamile","Muñoz Castillo Juan Bernardo","Olivos Leyth Patrick Mathias","Rodriguez Chudan Favio Enrique","Rodriguez Regalado Alisson Andrea","Sarmiento Coronado Liam DLeh","Serquen Chira Brunella Cayetana","Tapia Peña Iker Adriano","Valle Olaya Saira Naomi","Yovera López José Carlos","Zapata Herrera Ariana Naimid"],"4B":["Atto Luzón Samanta Alexandra","Bayona Jiménez Valeria Luhana","Burneo Miranda Nicolas Ignacio","Calle Martínez Nicolaz","Carrillo Correa Diego Fernando","Castillo Sánchez Rosfreid Catherine","Castro Rivera Claudio Antonio","Collazos Bernuy Sara Bertha","Cortez Alarcón Francis Nikol","Cueva Saavedra Miguel Leandro","Ganoza Farfán Isabella","Izquierdo Hernández José Andrés","Jimenez López Rosaly Beatriz","Llapapasca Gonzales Fabricio Eduardo","Mauricio Jiménez Santiago Jhandir","Morante Vargas Camila Belén","Neyra Orozco Dulce Mariana","Palomino Jimenez Diego Armando","Purizaca Oliva Stephany Nicole","Quevedo Calle Raúl Adrián","Torres Morán Sofía Victoria","Vilchez Nunta Tahisa"],"4C":["Amaya Espinoza Walas Benjamín","Benites Rojas Carol Paola","Calle Rivas Franklin Moisés","Castillo Lozada Xiomara Judith","Chero Ortiz Mya Luciana","Correa Osorio Dafne Cathleen","Damian Llauce Diana Yurico","Farfán Orozco Thiago Yamel","Inga Chinga Jesús Adrián","Julián Carranza Fernanda Miley","Llerena Rengifo Valeria Romina","Mauricio Llacsahuanga Kelvin Daniel","Mora Robledo Anyelin Cielo","Núñez Seminario Denilson Evander","Otero Gonzales Valeria Naomi","Palomino Clavijo Diego","Príncipe Nolasco Estrella de los Ángeles","Rodriguez Yovera Nicolas Valentin","Saavedra Senmache María Yamileth","Shupingahua Pulache Jailer Aaron","Vargas Picoy Victor Daniel","Vega Ruiz Hannah Katicsa","Villon Palacios Diego Adriano"],"4D":["Arana Portocarrero Mathias Joaquín","Bruno Bancayan Mariano Junior","Cabrera Castro Fabrizio Renato","Camacho Pipa Brisa Lizeth","Coronado Quevedo Mia Victoria","Cruzado Salazar Paulo Sebastián","De La Cruz Espinoza Víctor Leonardo","Litano Sullón Piero Mathias","Morán Peñaranda Luhanna Camila","Purizaca Alvarez Margaret Fernanda","Román Vilela Diego Mauricio","Rosillo Orozco Ronald Marco Rubén","Saavedra Gamboa Damarys Yolanda","Valle Olaya Astrid Noemi","Venegas Cardich Ana Claudia","Zapata García Fabritzio Denis","Zapata Masias Arianna Jameela","Zapata Saavedra Sheril Lucero Naomy"]};
+const DOCENTE = 'PROF. ÁNGEL OMAR OLIDEN PACHERREZ';
+const MATERIA = 'PLAN LECTOR';
+const COLEGIO = 'UCV COLLEGE';
+const ANIO    = '2026';
 
-const DOCENTE='PROF. ÁNGEL OMAR OLIDEN PACHERREZ';
-const MATERIA='PLAN LECTOR';
-const YCBG={1:'#4ade80',2:'#60a5fa',3:'#f472b6',4:'#fb923c'};
-const SC={P:'#4ade80',FI:'#f87171',T:'#fbbf24',FJ:'#60a5fa'};
-const SL={P:'Presente',FI:'Falta Injustificada',T:'Tardanza',FJ:'Falta Justificada'};
-const DAYS=['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
-const MONTHS=['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+// ── BASE DE DATOS (localStorage permite persistencia) ──────────
+const DB_DEFAULT = {
+  "1A":["Acuña Orozco Maria Alejandra","Chinga Mauricio Lindsay Alanna","Cruz Infante Massimo Mateo","Damian Llauce Yoselin Yamile","García Martínez Gaella Victoria","Guerrero Gonzalez Romy Arianna","More Seminario Dayron Smith","Paico Manrique Daniel Isaias","Panta Yamo Thiago Salvador","Rivera Salvador Mia Alitza Dae","Rodriguez Carrasco Thiago Matias","Seminario Núñez María Valentina","Talledo Pampas Santiago Rolando Franco"],
+  "1B":["Barrientos Chafloque Luciana Valentina","Bayona Artaza Luana Milagros","Celí Ramírez María Guadalupe","Chávez Gálvez Eduardo Leonel","Córdova Abad Nider Fran","Delgado Ybáñez Dylan Sebastián","Dioses Salazar Ana Paula","Marchena Rodríguez Yoel Aldhair","Mechan Aguilar Valeria Alessandra","Morán Fiestas Jazmín Alessandra","Rázuri Jara Daylín Guadalupe","Rebolledo Panta Gustavo Andrés","Sullon Saba Iker Joel"],
+  "1C":["Acaro Artaza Manuel Ignacio","Aguirre Yangua Patricia Ximena","Armas Ramos Luhana Anahi","Castillo Arica Camila Rafaella","Domador Bernuy Alma Mercedes","Domínguez Orozco Mia Belén","Huamán Santa Cruz Valery Abigail","La Serna Saravia Tiago Ismael","López Zapata Pool Antonio","Santur Peña Ivanna Alexia","Torres Salazar Joshue Andre","Villanueva de la Cruz Xiomara Antuanet"],
+  "1D":["Agurto Fiestas Stephanie Antonella","Armas Yamunaque Ricardo Isacc","Lachira Sandoval Maleya Micaela","Lazo García Paulo Sebastián","Mejía Santisteban Kendra Naiara","Purizaca Guerrero Will Alexander","Purizaca Merino Fabiana Emperatriz Antonella","Purizaca Torres Daiana Antonella","Ruiz Calle Thiago Guillermo","Tejada Ramírez Mariajosé","Villalta Carhuatocto Dyland Sebastian"],
+  "1E":["Arévalo Vegas Macarena Evangeline","Caballero Gulden Isabella Valeria","Calle Santín Thiago Alessandro","Cuyatti Rojas Thiago Evans","Dávila Alburqueque Mathias Francesco","Diaz Taboada Brithany Alejandra","Jaramillo Pintado Valeria Antonella","More Alvarado Renzo Nicolás","Neyra Huertas Sebastian Abdiel","Peña Villalobos Elena Maria Fabiana","Socola Nizama Nayeli Ayelen","Yactayo Campos Leonardo Geankarlos","Zapata Bustamante Santhiago Mateo"],
+  "1F":["Arica Cornejo Thais Saori","Castillo Giles Sebastián Antonio","Dioses Zapata Ariadna Massiel","Farias Talledo Briella","Herrera Rambla Leyton Sandra Valeria","Jimenez Reyes Eimy Yuleidy","Mogollón Sunción Angelo Manuel","More Purizaca Laleishka Zamantha","Paucar Velasco Mathias Jesaid","Purizaca Oliva Thiago Domingo Alberto","Ticliahuanga Umbo Fernando Jeanpool","Vargas Ojeda Kaory Danae"],
+  "1G":["Aguilar Castillo Thiago Moises","Aguilar Flores Luciana Belén","Arribasplata Bedregal Fátima","Atto Mondragón Yanco Salvador","Barba Goicochea Alexia Valeria","Córdova Córdova Luis Fernando","Delgado Feria José Sebastián","Facundo Mendoza Joaquín Fernando Miguel","Farfán Barranzuela Angélica Lucia","Lizarraga Mauricio Rayzzha Shanellie","Negrini Durand Mía Isanella","Paucar Antón José Miguel","Salazar Barrera Annika Brunella","Valle Abad Brithel Virginia","Vilchez Espinoza Matthew André"],
+  "1H":["Alburqueque Ginocchio Neil Evans","Carmen Juarez Carlos Sebastian","Colonia Vences María Fernanda Guadalupe","Cruzado Chumacero Fabian Alessandro","López Quinde Luis Fernando","Maluquis López Luhana Seleny","Mogollón Ravello Liam Benjamín","Otero Tene Khiara Olenka","Temoche Coello Marcelo Stefano","Velasco Cueva Isabella Victoria","Velasco Neira Valery Noemi"],
+  "2A":["Álamo López Marcos Uriel","Calle Sullón Fabrizio Benjamín","Cordova Carrión Naomy","Farfán Juárez Luhana Fabiana","Garcia Torres Marita Milagros","Gómez Delgado Fernanda Abigail","Gómez Saavedra Luis Mario","Manrique Nima Camila Guadalupe","Pacheco Gonzales Matheo Sebastian","Pastor Rodriguez Giaco Paolo","Ruiz Quispe Luis Fabrizio"],
+  "2B":["Alberca Cedillo Yefferson Jeampier","Calle Seminario Adriano Josué","Echeandía Inga Darlyne Sharik","García Nuñez Ricardo Paolo","Inga Bermeo Anthony Stefano Barek","Mauricio Palacios Isabella","Murguía Fan María José","Poberezhetc Pechon Dajana Nadezda","Revilla Calva Luhana de los Angeles","Sánchez Tejada Jazmín Belén","Talledo Hernández Luis Alejandro"],
+  "2C":["Arroyo García Ángelo Joshua","Caramantin Silva Clit Benjamin","Castillo Reyes Ashely Pierina","Díaz Sánchez Luciana Anthonela","Flores Campoverde Juan Diego","Huamán Eras Santiago Martín","Mechato Lazo Milton Adrián","Paiva Villalobos Yanis Valentina","Panta Gómez Dominik Salvador","Riofrio Medina Izabelle Guadalupe","Tesen Castillo Fernanda Maribel"],
+  "2D":["Ayala Alarcón Angely Lucero","Fiestas Chunga Mia Kaory","Huamán Córdova Feidy Yahaira","Huarcaya Velásquez Bianca Sofia","Jaramillo Espinoza Diego Armando","Lucano Jaramillo Mariajosé Itzayana","Marca Mamani Yampier Anderson","Mego Jiménez Giulia Letizia","Neira Mori Thiago Valentino","Pasapera Jiménez Rafael Aarón","Rivera Mondragón Jerry Jean Paul","Rojas Tirado Mateo Rafael","Torres Ayala Jordy Alexander"],
+  "2E":["Barco Carrión Pedro Luis","Dávila García Mia Valentina","Durand García Ruth Noemi","Encina Hidalgo Victor Manuel Alejandro","Frías Ramírez Anthonella Yaritza","Pazo Querevalú Darlyn Alonso","Quinde Zapata André Antonio","Rodríguez Rocha Renzo Jesús","Villegas Celi Mario Juan","Zegarra Saavedra Josué Nicola"],
+  "2F":["Carrasco Ramírez Rodrigo Neymar","Córdova Yarleque Samir Alejandro","Cruz Yovera Jostin Adrian","Espinoza Arámbulo Ivanna Mercedes","Gavilán Vinces Emanuel Joshua Luis","Gonzales Ramos Yahid Enrique","López Becerra Ximena Belén","More Feria Valeria Sofia","Rosillo Veliz Amel Alexandra Graciel","Vega Rentería Alejandra Sofia","Zapata Rosillo Cesar Enrique"],
+  "2G":["Alvarez Merino Valentino Alessandro","Burgos Diaz Brittany Yazmín","Cardoza Oliva Lucciana Katherine","Casavilca Guevara Frank Edú","Cavero Merino Dominick Danilo","De la Cruz Mena Dylan Jerick","Espinoza Calva Sol Anthonella","Huamán Chanduvi Juvetsy María","Juárez Calle Valeria Fernanda","Peña Torres Yubisay de Jesus","Ruiz Bobbio Mateo Keith","Velásquez Ricalde Cristopher Giuseppi"],
+  "2H":["Arbulú Troncos Santhiago José","Calle Calle Fabiana Saori","Céspedes Alburqueque Joaquin Nicolas","Espinoza Pariaton Zoe Zirel","Litano Sullon Thiago Sebastián","More Silva Thiago Anthony Gepzel","Peña Tejada Rhianna Bianca Lourdes","Rivera Seminario Fabiana Yuset","Rosales Ramos Pia Yuliana Alexandra","Saavedra García Emmanuel Gustavo","Sampertegui Olivos Estefano Leonidas","Sejuro Troncos Marina Alejandra","Villazón Chiroque Thiago Emmanuel"],
+  "3A":["Abad Coronado D Alessandra Anahis","Calderón Benites Shmuel Alejandro","Chuzón Lazo Valerhy Fernanda","Elera Carrillo Mauricio Sebastián","García Alvines Valentina Elizabeth","Malo Mendoza Gonzalo Fabrisio","Mondragón Bautista Valentina Treysi","Núñez Febre Luana Gabriela","Pacheco Gonzales Aaron Yadiel","Requena Silva Ángel Fabrizzio","Rivera Coveñas Leiner Dayiro","Salazar Chávez Santiago Mateo","Sullon Saba Nixie Yarheli","Vargas Correa Aurora Elizet","Villalta Manrique Iker Mateo"],
+  "3B":["Aguilar Revolledo Luhana Domenika","Castillo Simbala Kiara Valentina","Cavero Merino Diego Sebasthian","Diaz Taboada Dayron Fabian","Farfán Orozco Kaleth Yazith","Manayay Castillo Génesis Lucero","Mondragón Barreto Valeria Fabiana","Navarro Agurto Rubén Eliu","Nonajulca Coro Neymar Sebastián","Oquelis Morán Josue Salvador","Romero Montalbán Santiago","Saldivar Sandoval Ayrton David","Wong García Alba Jazmín"],
+  "3C":["Diaz Dominguez Daniel Alexander","Elera Llacsahuache Pedro Daniel","Espinoza Villalta Joaquín Alejandro","Fano More Marienella Abigail","Guerrero Córdova Génesis Camila","López Martínez Fiorella del Rosario","Martínez Tavara Diego Alonso","Navarro Ruiz Smith Joel","Orozco Chero Jeicob Benjmín","Ruiz Calle Kiara Elizabel","Silva Moscol Lucero","Toledo Espinoza Derek Eduardo","Vargas Picoy Dulce Daniela","Vásquez Otero Daniel Alejandro"],
+  "3D":["Alemán Abad Cristhian Xavier","Álvarez Ocampo Dylan Nadir","Bayona Prado Juan David","Chiroque Silupu Briana Mirella","Garabito Godos Hatsumi Kiyari","Guerrero Salas Alessandro Joel","Medina Valle Camila Luana","Moscol Calle Thiago Gael","Nuñez Rivera Gerard Augusto","Ruiz Sandoval Mateo Nicolás","Seminario Gutiérrez Nuria Jimena","Suárez Atarama Juan Matías","Torres Calle Flavia Anthonela","Vértiz Salazar Louisiana Valeria"],
+  "3E":["Bran Ventura Nuriel Augusto","Estela Rodriguez Luis Fernando","Inga Chinga Milagritos Maricielo","Mondragón Luna Aidan Jeffrey","Peña Ancajima Jeison Ezair","Purizaca Rodriguez Jhomayra Anyela Kaory","Sosa Serrano Rafaella Tahis","Tocto Ruiz Camila Michelle","Torres Salazar Jadiel Ricardo","Vilchez Arévalo Eleo Leonardo"],
+  "3F":["Amaya Cespedes Mathias","Ancajima Silupú Denzel Aarón","Atto Mondragón Kahory","Córdova Abad Luciana Ximena","Coro García Jean Franco","Ferro Rodriguez Joaquin Leandro","Herrera Alzamora Breitner Louis","Herrera Tizón Yunior Yair","Mendoza Vilela Luana Yamilet","Peña Olivera Bianca Belén","Seminario Regalado Camila Elizabeth","Ulloa Herrera Gabriel Jair","Vilela Zapata Franco Andre"],
+  "3G":["Ayme Pineda Luciana Mariel","Corilla Diaz Fernando Miguel","Francia Gil Fabrizio Alexander","Mogollón Berrú Jackson Uriel","Nunura Pazo Danner Paul","Ontaneda Jimenez Karen Dayana","Peña Villalobos Fabian Alexander","Quilcate Girón Amira De Los Cielos","Ruiz Zapata Victor Eduardo","Sanchéz Olaya Mathias Eduardo","Serrano Escobar Sharon Gelarin","Tesen Niño Mariana Abigail"],
+  "4A":["Arroyo Larrea Joaquín Sebastian","Azabache Maza Fabrizzio Mizael","Bruno Martinez Salomón Henry","Calderón Benites Luana Michaelly","Carhuapoma Negrini Danilo Esteban","Castro Lamadrid Santiago del Piero","Espinoza Chulle Rubby Rossmina","Eyzaguirre Callirgos Luana Nicoll","Garcia Zapata Blanca Kasumi","Gutierrez Rojas José David","Holguín Córdova Fernanda Sofia","Huertas Jiménez Rodrigo Alejandro","Lopez Feria Mya Antonella","Martínez Cahuaza Selheny Sayuri","Merino Ramírez Gemma Yamile","Muñoz Castillo Juan Bernardo","Olivos Leyth Patrick Mathias","Rodriguez Chudan Favio Enrique","Rodriguez Regalado Alisson Andrea","Sarmiento Coronado Liam DLeh","Serquen Chira Brunella Cayetana","Tapia Peña Iker Adriano","Valle Olaya Saira Naomi","Yovera López José Carlos","Zapata Herrera Ariana Naimid"],
+  "4B":["Atto Luzón Samanta Alexandra","Bayona Jiménez Valeria Luhana","Burneo Miranda Nicolas Ignacio","Calle Martínez Nicolaz","Carrillo Correa Diego Fernando","Castillo Sánchez Rosfreid Catherine","Castro Rivera Claudio Antonio","Collazos Bernuy Sara Bertha","Cortez Alarcón Francis Nikol","Cueva Saavedra Miguel Leandro","Ganoza Farfán Isabella","Izquierdo Hernández José Andrés","Jimenez López Rosaly Beatriz","Llapapasca Gonzales Fabricio Eduardo","Mauricio Jiménez Santiago Jhandir","Morante Vargas Camila Belén","Neyra Orozco Dulce Mariana","Palomino Jimenez Diego Armando","Purizaca Oliva Stephany Nicole","Quevedo Calle Raúl Adrián","Torres Morán Sofía Victoria","Vilchez Nunta Tahisa"],
+  "4C":["Amaya Espinoza Walas Benjamín","Benites Rojas Carol Paola","Calle Rivas Franklin Moisés","Castillo Lozada Xiomara Judith","Chero Ortiz Mya Luciana","Correa Osorio Dafne Cathleen","Damian Llauce Diana Yurico","Farfán Orozco Thiago Yamel","Inga Chinga Jesús Adrián","Julián Carranza Fernanda Miley","Llerena Rengifo Valeria Romina","Mauricio Llacsahuanga Kelvin Daniel","Mora Robledo Anyelin Cielo","Núñez Seminario Denilson Evander","Otero Gonzales Valeria Naomi","Palomino Clavijo Diego","Príncipe Nolasco Estrella de los Ángeles","Rodriguez Yovera Nicolas Valentin","Saavedra Senmache María Yamileth","Shupingahua Pulache Jailer Aaron","Vargas Picoy Victor Daniel","Vega Ruiz Hannah Katicsa","Villon Palacios Diego Adriano"],
+  "4D":["Arana Portocarrero Mathias Joaquín","Bruno Bancayan Mariano Junior","Cabrera Castro Fabrizio Renato","Camacho Pipa Brisa Lizeth","Coronado Quevedo Mia Victoria","Cruzado Salazar Paulo Sebastián","De La Cruz Espinoza Víctor Leonardo","Litano Sullón Piero Mathias","Morán Peñaranda Luhanna Camila","Purizaca Alvarez Margaret Fernanda","Román Vilela Diego Mauricio","Rosillo Orozco Ronald Marco Rubén","Saavedra Gamboa Damarys Yolanda","Valle Olaya Astrid Noemi","Venegas Cardich Ana Claudia","Zapata García Fabritzio Denis","Zapata Masias Arianna Jameela","Zapata Saavedra Sheril Lucero Naomy"]
+};
 
-let sel=null,att={},cur=1;
+// ── PERSISTENCIA: cargar DB desde localStorage ─────────────────
+function loadDB() {
+  try {
+    const saved = localStorage.getItem('planLector_DB_v2');
+    if (saved) return JSON.parse(saved);
+  } catch(e) {}
+  return JSON.parse(JSON.stringify(DB_DEFAULT)); // copia fresca
+}
+function saveDB() {
+  try { localStorage.setItem('planLector_DB_v2', JSON.stringify(DB)); } catch(e) {}
+}
+let DB = loadDB();
 
-// CLOCK
-const p=n=>String(n).padStart(2,'0');
+// ── CONSTANTES ─────────────────────────────────────────────────
+const YCBG  = {1:'#4ade80',2:'#60a5fa',3:'#f472b6',4:'#fb923c'};
+const SC    = {P:'#4ade80',FI:'#f87171',T:'#fbbf24',FJ:'#60a5fa'};
+const SL    = {P:'Presente',FI:'Falta Injustificada',T:'Tardanza',FJ:'Falta Justificada'};
+const DAYS  = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+const MONTHS= ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+
+let sel = null, att = {}, cur = 1, newStudents = [];
+
+// ── RELOJ ──────────────────────────────────────────────────────
+const pad = n => String(n).padStart(2,'0');
 (function tick(){
-  const d=new Date();
-  document.getElementById('clk').textContent=`${p(d.getHours())}:${p(d.getMinutes())}`;
-  document.getElementById('cld').textContent=DAYS[d.getDay()];
-  setTimeout(tick,5000);
+  const d = new Date();
+  document.getElementById('clk').textContent = `${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  document.getElementById('cld').textContent = DAYS[d.getDay()];
+  setTimeout(tick, 5000);
 })();
 
-// Init date
+// ── FECHA INICIAL ──────────────────────────────────────────────
 (()=>{
-  const d=new Date();
-  document.getElementById('fch').value=`${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;
+  const d = new Date();
+  document.getElementById('fch').value = `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
 })();
 
-// Build grids
-[1,2,3,4].forEach(y=>{
-  document.getElementById('g'+y).innerHTML=Object.keys(DB)
-    .filter(k=>+k[0]===y)
-    .map(k=>`<button class="schip" data-y="${y}" data-k="${k}" onclick="pick('${k}')">${k}</button>`)
+// ── CONSTRUIR GRIDS ────────────────────────────────────────────
+[1,2,3,4].forEach(y => {
+  document.getElementById('g'+y).innerHTML = Object.keys(DB)
+    .filter(k => +k[0] === y)
+    .map(k => `<button class="schip" data-y="${y}" data-k="${k}" onclick="pick('${k}')">${k}</button>`)
     .join('');
 });
 
-function pick(k){
-  sel=k;
-  document.querySelectorAll('.schip').forEach(b=>b.classList.toggle('sel',b.dataset.k===k));
-  document.getElementById('fabn').disabled=false;
+function pick(k) {
+  sel = k;
+  document.querySelectorAll('.schip').forEach(b => b.classList.toggle('sel', b.dataset.k === k));
+  document.getElementById('fabn').disabled = false;
 }
 
-function dateStr(fv){
-  if(!fv)return'';
-  const[yr,mo,dy]=fv.split('-').map(Number);
-  const d=new Date(yr,mo-1,dy);
-  return`${DAYS[d.getDay()]}, ${dy} de ${MONTHS[mo-1]} ${yr}`;
+function dateStr(fv) {
+  if (!fv) return '';
+  const [yr,mo,dy] = fv.split('-').map(Number);
+  const d = new Date(yr, mo-1, dy);
+  return `${DAYS[d.getDay()]}, ${dy} de ${MONTHS[mo-1]} de ${yr}`;
 }
 
-// NAVIGATION
-function go(n){
-  if(n===2&&!sel)return;
-  if(n===2)buildS2();
-  if(n===3)buildS3();
-  cur=n;
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+// Nombre de hoja = "2A · 29-Mar-2026"
+function sheetName(seccion, fv) {
+  if (!fv) return seccion;
+  const [yr,mo,dy] = fv.split('-').map(Number);
+  const mesCorto = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'][mo-1];
+  return `${seccion} · ${pad(dy)}-${mesCorto}-${yr}`;
+}
+
+// ── NAVEGACIÓN ─────────────────────────────────────────────────
+function go(n) {
+  if (n === 2 && !sel) return;
+  if (n === 2) buildS2();
+  if (n === 3) buildS3();
+  cur = n;
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById('s'+n).classList.add('active');
-  document.getElementById('pf').style.width=(n/4*100)+'%';
-  document.getElementById('fab').style.display=n<=2?'block':'none';
-  if(n===1){
-    document.getElementById('fabn').textContent='Continuar →';
-    document.getElementById('fabn').onclick=()=>go(2);
-    document.getElementById('fabn').disabled=!sel;
+  document.getElementById('pf').style.width = (n/4*100) + '%';
+  document.getElementById('fab').style.display = n <= 2 ? 'block' : 'none';
+  if (n === 1) {
+    document.getElementById('fabn').textContent = 'Continuar →';
+    document.getElementById('fabn').onclick = () => go(2);
+    document.getElementById('fabn').disabled = !sel;
   }
-  if(n===2){
-    document.getElementById('fabn').textContent='Revisar y enviar →';
-    document.getElementById('fabn').onclick=()=>go(3);
-    document.getElementById('fabn').disabled=false;
+  if (n === 2) {
+    document.getElementById('fabn').textContent = 'Revisar y enviar →';
+    document.getElementById('fabn').onclick = () => go(3);
+    document.getElementById('fabn').disabled = false;
   }
-  window.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo({top:0, behavior:'smooth'});
 }
+function fabAct() { go(cur + 1); }
 
-function fabAct(){go(cur+1);}
-
-// S2
-function buildS2(){
-  const st=DB[sel],y=+sel[0],col=YCBG[y],fv=document.getElementById('fch').value;
-  att={};
-  st.forEach(s=>{att[s]='P';});
-  document.getElementById('sh').innerHTML=`
+// ── PANTALLA 2: LISTA ──────────────────────────────────────────
+function buildS2() {
+  const st = DB[sel], y = +sel[0], col = YCBG[y];
+  const fv = document.getElementById('fch').value;
+  att = {};
+  newStudents = [];
+  st.forEach(s => { att[s] = 'P'; });
+  document.getElementById('sh').innerHTML = `
     <div class="sbadge" style="background:${col}">${sel}</div>
     <div class="shinfo">
       <div class="shn">${y}° Grado · Sección ${sel[1]}</div>
       <div class="shm">${st.length} estudiantes · ${MATERIA}</div>
       <div class="shd">${dateStr(fv)}</div>
     </div>`;
+  document.getElementById('newName').value = '';
   renderList();
 }
 
-function renderList(){
-  document.getElementById('sl').innerHTML=DB[sel].map((name,i)=>{
-    const s=att[name]||'P';
-    return`<div class="srow s${s}" id="r${i}">
+function renderList() {
+  const students = DB[sel];
+  document.getElementById('sl').innerHTML = students.map((name, i) => {
+    const s = att[name] || 'P';
+    const isNew = newStudents.includes(name);
+    return `<div class="srow s${s}${isNew ? ' new-student' : ''}" id="r${i}">
       <div class="snum">${i+1}</div>
       <div class="sname">${name}</div>
+      ${isNew ? '<span class="snew-badge">NUEVO</span>' : ''}
       <div class="spills">
-        ${['P','FI','T','FJ'].map(v=>`<button class="sp${s===v?' on'+v:''}" onclick="setSt(${i},'${v}')">${v}</button>`).join('')}
+        ${['P','FI','T','FJ'].map(v =>
+          `<button class="sp${s===v?' on'+v:''}" onclick="setSt(${i},'${v}')">${v}</button>`
+        ).join('')}
       </div>
     </div>`;
   }).join('');
   updCtr();
 }
 
-function setSt(i,st){
-  const name=DB[sel][i];
-  att[name]=st;
-  const row=document.getElementById('r'+i);
-  row.className='srow s'+st;
-  row.querySelectorAll('.sp').forEach((b,j)=>{
-    const v=['P','FI','T','FJ'][j];
-    b.className='sp'+(st===v?' on'+v:'');
+function setSt(i, st) {
+  const name = DB[sel][i];
+  att[name] = st;
+  const row = document.getElementById('r'+i);
+  const isNew = newStudents.includes(name);
+  row.className = `srow s${st}${isNew ? ' new-student' : ''}`;
+  row.querySelectorAll('.sp').forEach((b, j) => {
+    const v = ['P','FI','T','FJ'][j];
+    b.className = 'sp' + (st === v ? ' on'+v : '');
   });
   updCtr();
 }
 
-function markAll(st){DB[sel].forEach(n=>{att[n]=st;});renderList();}
-
-function updCtr(){
-  const c={P:0,FI:0,T:0,FJ:0};
-  Object.values(att).forEach(s=>{if(c[s]!==undefined)c[s]++;});
-  ['P','FI','T','FJ'].forEach(k=>{document.getElementById('c'+k).textContent=c[k];});
+function markAll(st) {
+  DB[sel].forEach(n => { att[n] = st; });
+  renderList();
 }
 
-// S3
-function buildS3(){
-  const st=DB[sel],y=+sel[0],col=YCBG[y],fv=document.getElementById('fch').value;
-  document.getElementById('cfh').innerHTML=`
+function updCtr() {
+  const c = {P:0, FI:0, T:0, FJ:0};
+  Object.values(att).forEach(s => { if(c[s]!==undefined) c[s]++; });
+  ['P','FI','T','FJ'].forEach(k => {
+    const el = document.getElementById('c'+k);
+    el.textContent = c[k];
+    const ctr = document.getElementById('ctr'+k);
+    ctr.classList.remove('pulse');
+    void ctr.offsetWidth;
+    ctr.classList.add('pulse');
+  });
+}
+
+// ── AGREGAR ALUMNO ─────────────────────────────────────────────
+function addStudent() {
+  const input = document.getElementById('newName');
+  const name = input.value.trim();
+  if (!name) { toast('Escribe el nombre del alumno','err'); return; }
+  if (DB[sel].includes(name)) { toast('⚠ Ese alumno ya existe en la lista','err'); return; }
+
+  // Agregar al DB en memoria y a localStorage
+  DB[sel].push(name);
+  saveDB(); // ← persiste permanentemente
+
+  att[name] = 'P';
+  newStudents.push(name);
+  input.value = '';
+
+  renderList();
+  toast(`✓ ${name.split(' ')[0]} agregado permanentemente`, 'ok');
+
+  // Scroll al final de la lista
+  setTimeout(() => {
+    const sl = document.getElementById('sl');
+    sl.lastElementChild && sl.lastElementChild.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }, 100);
+}
+
+// Permitir Enter en el input de nuevo alumno
+document.getElementById('newName').addEventListener('keydown', e => {
+  if (e.key === 'Enter') addStudent();
+});
+
+// ── PANTALLA 3: CONFIRMAR ──────────────────────────────────────
+function buildS3() {
+  const st = DB[sel], y = +sel[0], col = YCBG[y];
+  const fv = document.getElementById('fch').value;
+  const sn = sheetName(sel, fv);
+
+  document.getElementById('cfh').innerHTML = `
     <div style="display:flex;align-items:center;gap:13px">
       <div style="width:48px;height:48px;border-radius:12px;background:${col};display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#060d1f;flex-shrink:0">${sel}</div>
       <div>
@@ -411,115 +561,155 @@ function buildS3(){
         <div style="font-size:10px;color:var(--w3);margin-top:1px">${st.length} estudiantes · ${DOCENTE}</div>
       </div>
     </div>`;
-  const b={P:[],FI:[],T:[],FJ:[]};
-  st.forEach(n=>{const s=att[n]||'P';b[s].push(n);});
-  document.getElementById('cfl').innerHTML=Object.entries(b)
-    .filter(([,a])=>a.length)
-    .map(([s,a])=>`<div class="cfi cf${s}">
+
+  document.getElementById('sheet-preview').innerHTML =
+    `📄 Se creará la hoja <strong>"${sn}"</strong> en Google Sheets con todos los datos de esta sesión.`;
+
+  const b = {P:[], FI:[], T:[], FJ:[]};
+  st.forEach(n => { const s = att[n]||'P'; b[s].push(n); });
+  document.getElementById('cfl').innerHTML = Object.entries(b)
+    .filter(([,a]) => a.length)
+    .map(([s,a]) => `<div class="cfi cf${s}">
       <div class="cfdot" style="background:${SC[s]}"></div>
       <div style="flex:1">
         <div class="cflbl">${SL[s]}</div>
-        <div class="cfnames">${a.slice(0,3).join(', ')}${a.length>3?` y ${a.length-3} más`:''}</div>
+        <div class="cfnames">${a.slice(0,4).join(', ')}${a.length>4?` y ${a.length-4} más`:''}</div>
       </div>
       <div class="cfcnt" style="color:${SC[s]}">${a.length}</div>
     </div>`).join('');
-}
 
-// ══════════════════════════════════════════════════
-// ✅ ENVÍO A GOOGLE SHEETS (CORREGIDO)
-// El fetch usa no-cors para evitar bloqueos CORS
-// ══════════════════════════════════════════════════
-async function sendCloud(){
-  const fv=document.getElementById('fch').value;
-  const payload={
-    seccion:sel,
-    fecha:fv,
-    docente:DOCENTE,
-    materia:MATERIA,
-    registros:DB[sel].map((n,i)=>({num:i+1,nombre:n,estado:att[n]||'P'}))
-  };
-
-  showOvl('Enviando a Google Sheets…');
-
-  try{
-    // Google Apps Script requiere no-cors desde páginas externas
-    await fetch(SCRIPT_URL, {
-      method:'POST',
-      mode:'no-cors',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(payload)
-    });
-    // Con no-cors no podemos leer la respuesta, pero si llegó aquí sin error = éxito
-    hideOvl();
-    showOk();
-  } catch(e){
-    hideOvl();
-    toast('No se pudo conectar. Revisa tu conexión.','err');
+  // Nuevos alumnos
+  const nsc = document.getElementById('new-students-confirm');
+  if (newStudents.length > 0) {
+    nsc.innerHTML = `<div class="infobox pink">
+      ✨ <strong>${newStudents.length} alumno${newStudents.length>1?'s':''} nuevo${newStudents.length>1?'s':''}</strong> agregado${newStudents.length>1?'s':''} permanentemente:<br>
+      <span style="color:var(--w2)">${newStudents.join(', ')}</span>
+    </div>`;
+  } else {
+    nsc.innerHTML = '';
   }
 }
 
-// EXCEL / CSV DOWNLOAD
-function dlExcel(){
-  const st=DB[sel],fv=document.getElementById('fch').value;
-  const rows=[
-    [`REGISTRO DE ASISTENCIA - ${MATERIA} - UCV COLLEGE 2026`],
-    [`Sección: ${sel}`,`Grado: ${+sel[0]}°`,`Fecha: ${dateStr(fv)}`],
-    [`Docente: ${DOCENTE}`],
-    [],
-    ['N°','APELLIDOS Y NOMBRES','ESTADO','DESCRIPCIÓN']
-  ];
-  st.forEach((name,i)=>{
-    const s=att[name]||'P';
-    rows.push([i+1,name,s,SL[s]]);
-  });
-  const c={P:0,FI:0,T:0,FJ:0};
-  Object.values(att).forEach(s=>{if(c[s]!==undefined)c[s]++;});
-  rows.push(
-    [],
-    ['','TOTAL PRESENTES',c.P,`${Math.round(c.P/st.length*100)}%`],
-    ['','FALTAS INJUSTIFICADAS',c.FI,''],
-    ['','TARDANZAS',c.T,''],
-    ['','FALTAS JUSTIFICADAS',c.FJ,'']
-  );
-  const csv='\uFEFF'+rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));
-  a.download=`Asistencia_${MATERIA.replace(/ /g,'_')}_${sel}_${fv}.csv`;
-  a.click();
-  toast('✓ Descargado correctamente','ok');
+// ── ENVIAR A GOOGLE SHEETS ─────────────────────────────────────
+async function sendCloud() {
+  const fv  = document.getElementById('fch').value;
+  const sn  = sheetName(sel, fv);
+  const st  = DB[sel];
+
+  const payload = {
+    accion:       'registrar_sesion',
+    seccion:      sel,
+    fecha:        fv,
+    hoja:         sn,           // ← nombre de hoja con fecha incluida
+    docente:      DOCENTE,
+    materia:      MATERIA,
+    colegio:      COLEGIO,
+    anio:         ANIO,
+    nuevosAlumnos: newStudents, // ← lista de alumnos nuevos
+    registros:    st.map((n, i) => ({
+      num:    i + 1,
+      nombre: n,
+      estado: att[n] || 'P',
+      nuevo:  newStudents.includes(n)
+    }))
+  };
+
+  showOvl(`Creando hoja "${sn}"…\nEsto puede tardar unos segundos.`);
+
+  try {
+    await fetch(SCRIPT_URL, {
+      method:  'POST',
+      mode:    'no-cors',
+      headers: {'Content-Type': 'application/json'},
+      body:    JSON.stringify(payload)
+    });
+    hideOvl();
+    showOk();
+  } catch(e) {
+    hideOvl();
+    toast('Sin conexión. Descarga el CSV como respaldo.','err');
+  }
 }
 
-// SUCCESS SCREEN
-function showOk(){
-  const st=DB[sel],fv=document.getElementById('fch').value;
-  const c={P:0,FI:0,T:0,FJ:0};
-  Object.values(att).forEach(s=>{if(c[s]!==undefined)c[s]++;});
-  document.getElementById('ssub').innerHTML=`Sección <strong>${sel}</strong> · ${dateStr(fv)}<br>Registrado en Google Sheets`;
-  document.getElementById('sst').innerHTML=[
-    ['P','#4ade80','Presentes'],
-    ['FI','#f87171','Faltas'],
-    ['T','#fbbf24','Tardanzas'],
-    ['FJ','#60a5fa','Justificadas']
-  ].map(([k,col,lbl])=>`<div class="ssi"><div class="ssv" style="color:${col}">${c[k]}</div><div class="ssl">${lbl}</div></div>`).join('');
+// ── DESCARGAR CSV ──────────────────────────────────────────────
+function dlCSV() {
+  const st = DB[sel], fv = document.getElementById('fch').value;
+  const sn = sheetName(sel, fv);
+  const rows = [
+    [`REGISTRO DE ASISTENCIA · ${MATERIA} · ${COLEGIO} ${ANIO}`],
+    [`Hoja: ${sn}`],
+    [`Sección: ${sel}`, `Grado: ${+sel[0]}°`, `Fecha: ${dateStr(fv)}`],
+    [`Docente: ${DOCENTE}`], [],
+    ['N°','APELLIDOS Y NOMBRES','ESTADO','DESCRIPCIÓN','NUEVO']
+  ];
+  st.forEach((name, i) => {
+    const s = att[name] || 'P';
+    rows.push([i+1, name, s, SL[s], newStudents.includes(name) ? 'SÍ' : '']);
+  });
+  const c = {P:0,FI:0,T:0,FJ:0};
+  Object.values(att).forEach(s => { if(c[s]!==undefined) c[s]++; });
+  rows.push([],
+    ['','TOTAL PRESENTES',c.P,`${Math.round(c.P/st.length*100)}%`,''],
+    ['','FALTAS INJUSTIFICADAS',c.FI,'',''],
+    ['','TARDANZAS',c.T,'',''],
+    ['','FALTAS JUSTIFICADAS',c.FJ,'','']
+  );
+  const csv = '\uFEFF' + rows.map(r => r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));
+  a.download = `${sn.replace(/ · /g,'_')}.csv`;
+  a.click();
+  toast('✓ CSV descargado','ok');
+}
+
+// ── PANTALLA 4: ÉXITO ──────────────────────────────────────────
+function showOk() {
+  const fv = document.getElementById('fch').value;
+  const sn = sheetName(sel, fv);
+  const c  = {P:0,FI:0,T:0,FJ:0};
+  Object.values(att).forEach(s => { if(c[s]!==undefined) c[s]++; });
+
+  document.getElementById('ssub').innerHTML =
+    `Sección <strong>${sel}</strong> · ${dateStr(fv)}`;
+  document.getElementById('sheet-ok').innerHTML =
+    `📄 Hoja <strong>"${sn}"</strong> guardada en Google Sheets`;
+  document.getElementById('sst').innerHTML = [
+    ['P','#4ade80','Presentes'],['FI','#f87171','Faltas'],
+    ['T','#fbbf24','Tardanzas'],['FJ','#60a5fa','Justificadas']
+  ].map(([k,col,lbl]) =>
+    `<div class="ssi"><div class="ssv" style="color:${col}">${c[k]}</div><div class="ssl">${lbl}</div></div>`
+  ).join('');
+
+  const nou = document.getElementById('new-stu-ok');
+  nou.innerHTML = newStudents.length > 0
+    ? `<div class="infobox pink" style="margin-bottom:12px;text-align:left">
+        ✨ <strong>${newStudents.length} alumno${newStudents.length>1?'s':''}</strong> guardado${newStudents.length>1?'s':''} permanentemente en la sección ${sel}.
+      </div>`
+    : '';
+
   go(4);
 }
 
-function reset(){
-  sel=null;att={};
-  document.querySelectorAll('.schip').forEach(b=>b.classList.remove('sel'));
-  const d=new Date();
-  document.getElementById('fch').value=`${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())}`;
+function reset() {
+  sel = null; att = {}; newStudents = [];
+  document.querySelectorAll('.schip').forEach(b => b.classList.remove('sel'));
+  const d = new Date();
+  document.getElementById('fch').value = `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
   go(1);
 }
 
-function showOvl(m){document.getElementById('ovlm').textContent=m;document.getElementById('ovl').classList.add('on');}
-function hideOvl(){document.getElementById('ovl').classList.remove('on');}
-function toast(msg,type=''){
-  const t=document.getElementById('tst');
-  t.textContent=msg;
-  t.className='toast on'+(type?' '+type:'');
+// ── HELPERS ────────────────────────────────────────────────────
+function showOvl(m) {
+  document.getElementById('ovlm').textContent = m;
+  document.getElementById('ovl').classList.add('on');
+}
+function hideOvl() { document.getElementById('ovl').classList.remove('on'); }
+function toast(msg, type='') {
+  const t = document.getElementById('tst');
+  t.textContent = msg;
+  t.className = 'toast on' + (type ? ' '+type : '');
   clearTimeout(t._t);
-  t._t=setTimeout(()=>{t.className='toast';},2800);
+  t._t = setTimeout(() => { t.className = 'toast'; }, 3000);
 }
 
 go(1);
